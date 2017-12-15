@@ -1,0 +1,33 @@
+{
+  "title": "Room",
+  "entity": "room",
+  "indexOn": "city",
+  "filter": [
+    "city"
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "label": "Id",
+      "isId": true,
+      "readonly": true,
+      "type": "number"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "label": "Name"
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "label": "City"
+    },
+    {
+      "name": "stars",
+      "type": "string",
+      "control": "number",
+      "label": "Stars"
+    }
+  ]
+}
