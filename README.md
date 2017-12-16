@@ -1,4 +1,6 @@
-# angular-crud
+# angularfire2-crud
+
+BASED ON WORK BY MANFRED STEYER ``https://github.com/manfredsteyer/angular-crud``
 
 Generating CRUD applications with the Angular CLI and Schematics.
 
@@ -10,9 +12,9 @@ Generating CRUD applications with the Angular CLI and Schematics.
 
 ## Tutorial: Getting Started 
 
-1. Clone the following repo ``https://github.com/manfredsteyer/angular-crud``
+1. Clone the following repo ``https://github.com/erikhaddad/angularfire2-crud``
     ```
-    git clone https://github.com/manfredsteyer/angular-crud
+    git clone https://github.com/erikhaddad/angularfire2-crud
     ```
 
    You could also start with an empty project but this repo contains everything you need to get started quickly: theming, configured routing and a menu.
@@ -20,11 +22,11 @@ Generating CRUD applications with the Angular CLI and Schematics.
 2. Install the needed npm packages:
 
    ```
-   cd angular-crud
+   cd angularfire2-crud
    npm install
    ```
 
-   Note, that this also installs ``angular-crud``.
+   Note, that this also installs ``angularfire2-crud``.
 
 3. Switch to the folder ``src\app\hotel`` and create a file ``model.json`` with following content:
 
@@ -71,7 +73,7 @@ Generating CRUD applications with the Angular CLI and Schematics.
 4. In the same folder, run the following Angular CLI based command:
 
     ```
-    ng g crud-module hotel --collection angular-crud 
+    ng g crud-module hotel --collection angularfire2-crud
     ```
 5. Now, you get files generated for managing hotels.
 
@@ -85,7 +87,7 @@ Generating CRUD applications with the Angular CLI and Schematics.
 
     Please note, that you cannot save  records with Ids 1 to 5 b/c they are restricted for demos.
 
-## Extending angular-crud
+## Extending angularfire2-crud
 
 You can fork this repo and extend the generated code using Schematics. Infos about how to use Schematics can be found here:
 
