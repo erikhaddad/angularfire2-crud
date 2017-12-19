@@ -16,39 +16,38 @@ export class <%= classify(name) %>Service {
 
     findById(id: string): AngularFirestoreDocument<<%= classify(name) %>> {
         return this.afs.doc(`${this.afsPath}/${id}`);
-    }
+}
 
     load(): AngularFirestoreCollection<<%= classify(name) %>> {
         return this.afs.collection(this.afsPath, ref => ref.orderBy('<%= model.indexOn %>'));
-    }
+}
 
     find(filter: <%= classify(name) %>Filter): Observable<<%= classify(name) %>[]> {
         return this.afs.collection(this.afsPath, ref => {
-            <%=
+            <%
             let fields = getFilterFields(model);
             if (fields) {
-                %>ref<%=
-                for (let field of fields; let idx = index) {
-                    %>.where('<%=field.name%>', '==', 'filter.<%=field.name%>')<%=
+                for (let field of fields) {
+                %>
+                    ref = ref.where('<%=field.name%>', '==', 'filter.<%=field.name%>');
+                <%
                 }
-                %>;<%
             }
-            %>
+        %>
         });
-    }
+}
 
     create(entity: <%= classify(name) %>): Promise<any> {
         const key = this.afs.createId();
 
-        return this.afs.doc(`${this.afsPath}/${key}`).set(entity);
-    }
+    return this.afs.doc(`${this.afsPath}/${key}`).set(entity);
+}
 
     update(key: string, entity: <%= classify(name) %>): Promise<any> {
         return this.afs.doc(`${this.afsPath}/${key}`).update(entity);
-    }
+}
 
     remove(key: string): Promise<any> {
         return this.afs.doc(`${this.afsPath}/${key}`).delete();
-    }
 }
-
+}
