@@ -9,10 +9,12 @@
   "keywords": [
     "schematics",
     "Angular",
+    "AngularFire2",
+    "Firebase",
     "CRUD",
     "generate"
   ],
-  "author": "Manfred Steyer",
+  "author": "Manfred Steyer & Erik Haddad",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "devDependencies": {
@@ -23,6 +25,7 @@
     "@types/json5": "0.0.29",
     "@types/node": "^8.5.1",
     "jasmine": "^2.8.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.2"
   },
   "dependencies": {
